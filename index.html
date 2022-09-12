@@ -4,53 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
     <title>Mercado Digital Creative Agency</title>
 </head>
-<body>
+  <body>
+    
+    <div class="hero-img"></div>
+    <div class=" container-fluid"></div>
+    <header>
+      <a href="#" class="logo">Mercado</a>
+      <nav>
+        <svg class="close" id="No" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+          <circle id="Ellipse_111" data-name="Ellipse 111" cx="20" cy="20" r="20" fill="#f9f9f9"/>
+          <g id="Symbol_85_1" data-name="Symbol 85 – 1" transform="translate(-1052 -298)">
+            <path id="Union_3" data-name="Union 3" d="M7.778,9.192,1.414,15.557,0,14.142,6.364,7.778,0,1.414,1.414,0,7.778,6.364,14.142,0l1.415,1.414L9.192,7.778l6.364,6.364-1.415,1.415Z" transform="translate(1064 310)" fill="#000927"/>
+          </g>
+        </svg>
 
-    <!-- Navbar -->
-    Logo 
-    Home
-    About 
-    Blog 
-    Gallery 
-    Contact 
-    Services 
-    Notification icon 
-    Search icon 
-    Side menu dropdown
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
 
-    <!-- Sidebar -->
-    Facebook icon and link 
-    Twitter 
-    Website
-    Instagram 
+      <svg class=" menu" id="Menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20">
+        <path id="Menu-2" data-name="Menu" d="M0,20V17.142H18.752V20Zm0-8.571V8.571H30v2.858ZM0,2.858V0H30V2.858Z" fill="#000927"/>
+      </svg>
 
-    <!-- 2 Columns -->
+    </header>
+    <section class=" hero">
+      <h1>We craft the best designs for you</h1>
 
-    <!-- Hero -->
-    Hero Text 
-    Description 
-    Discover more link
-    Watch Intro
-    <!-- image -->
+      <p class=" subhead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        laudantium distinctio aspernatur commodi accusamus similique explicabo Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        laudantium distinctio aspernatur commodi.</p>
 
+        <h3 class="discover">Discover More</h3>
 
+        <div class="player">
+          <p>Watch Intro</p>
+  
+          <svg class=" video-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45">
+            <g id="Ellipse_3" data-name="Ellipse 3" fill="#fff" stroke="#2699fb" stroke-width="4">
+              <circle cx="22.5" cy="22.5" r="22.5" stroke="none"/>
+              <circle cx="22.5" cy="22.5" r="20.5" fill="none"/>
+            </g>
+            <path id="Polygon_1" data-name="Polygon 1" d="M7,0l7,8H0Z" transform="translate(27 16) rotate(90)" fill="#2699fb"/>
+          </svg>
+        </div>
+    </section>
 
+    <div class=" container-fluid">
+      <div class=" row">
+        
+      </div>
+    </div>
+    
 
+    <script>
+      const menu =document.querySelector('.menu')
+      const close =document.querySelector('.close')
+      const nav =document.querySelector('nav')
 
+      menu.addEventListener('click', () => {
+        nav.classList.add('open-nav')
+      })
 
+      close.addEventListener('click', () => {
+        nav.classList.remove('open-nav')
+      })
+    </script>
 
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E8CGM1DNCC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-</body>
+  gtag('config', 'G-E8CGM1DNCC');
+</script>
+    <script src="/bootstrap-5.0.0-beta3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
+    <script src="/bootstrap-5.0.0-beta3-dist/js/"></script>
+  </body>
 </html>
