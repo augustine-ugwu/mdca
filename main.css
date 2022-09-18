@@ -24,65 +24,9 @@ a {
 }
 
 .logo {
-  color: blue;
+  color: #000927;
   font-weight: bold;
   font-size: 1.8em;
-}
-
-nav {
-  position: fixed;
-  right: 0;
-  top: 0;
-  background-color: #000927;
-  height: 100vh;
-  width: 50%;
-  z-index: 999;
-  text-transform: uppercase;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: -webkit-transform .5s ease-in-out;
-  transition: -webkit-transform .5s ease-in-out;
-  transition: transform .5s ease-in-out;
-  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 8em;
-}
-
-nav ul a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.3rem;
-  padding: .75em 2em;
-  display: block;
-}
-
-nav ul a:hover {
-  background: #f9f9f9;
-}
-
-nav .close {
-  float: right;
-  margin: 2em;
-  width: 2.5em;
-}
-
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-header svg {
-  width: 2em;
-  margin-top: 0.5em;
-  cursor: pointer;
 }
 
 section.hero {
@@ -108,7 +52,14 @@ h1 {
 }
 
 .discover {
-  margin-top: 2em;
+  position: relative;
+}
+
+.discover .discover-line {
+  width: 10em;
+  height: 4em;
+  top: 0%;
+  position: absolute;
 }
 
 .player {
@@ -216,6 +167,13 @@ section.brief {
   }
   .discover {
     margin-top: .5em;
+    position: relative;
+  }
+  .discover .discover-line {
+    width: 12em;
+    top: 0%;
+    position: absolute;
+    margin-top: .3em;
   }
   .player {
     margin-top: 7em;
