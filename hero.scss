@@ -1,0 +1,70 @@
+// Hero section of the page.
+
+
+.hero-img{
+    position: absolute;
+    top: 0;
+    left: unset;
+    right: 0;
+    background: url(./images/001.png);
+    background-size: cover;
+    background-position-x: 20%;
+    background-position-y: 20%;
+    width: 80%;
+    height: 100vh;
+    z-index: -1;
+    // animation: introLoad 2s forwards ease-in;
+}
+
+section.hero {
+    color: #000927;
+    height: 90vh;
+    animation: moveDown 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-top: 1.5em;
+    line-height: 3.5rem;
+    font-weight:700 ;
+}
+
+.subhead {
+    margin-top: 1.5em;
+    font-size: 1.2rem;
+    color: #707070;
+    font-weight: 600;
+}
+
+.discover {
+    position: relative;
+
+    .discover-line {
+        width: 10em;
+        height: 4em;
+        top: 0%;
+        position: absolute;
+    }
+}
+
+.player {
+
+    margin-top: 3em;
+    display: flex;
+
+    p {
+        margin-top: .2em;
+        margin-left: 2.5em;
+        font-weight: bold;
+        color: #707070;
+    }
+    svg {
+        position: absolute;
+        width: 2em;
+    }
+}
+
+section.brief {
+    text-emphasis: none;
+}

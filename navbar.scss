@@ -40,3 +40,18 @@ nav {
         width: 2.5em;
     }
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    svg {
+        width: 2em;
+        margin-top: 0.5em;
+        cursor: pointer;
+    }
+}
+
+.open-nav {
+    transform: translateX(0%);
+}
