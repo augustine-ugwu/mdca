@@ -1,11 +1,5 @@
 // General setting for the entire site, including heading and navigation bar...
 
-
-body {
-    background-color: #f9f9f9;
-    margin: 2em;
-}
-
 a {
     color: white;
     text-decoration: none;
@@ -58,6 +52,7 @@ nav {
 header {
     display: flex;
     justify-content: space-between;
+    margin: 1em;
 
     svg {
         width: 2em;

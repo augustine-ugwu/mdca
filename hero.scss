@@ -1,5 +1,7 @@
 // Hero section of the page.
-
+.hero {
+    margin: 1em;
+}
 
 .hero-img{
     position: absolute;
@@ -27,14 +29,14 @@ h1 {
     font-size: 3.5rem;
     margin-top: 1.5em;
     line-height: 3.5rem;
-    font-weight:700 ;
+    font-weight: 600;
 }
 
 .subhead {
     margin-top: 1.5em;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #707070;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .discover {
