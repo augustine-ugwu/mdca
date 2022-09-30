@@ -58,7 +58,8 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 1em;
+  margin: 1.5em;
+  margin-top: 0em;
 }
 
 header svg {

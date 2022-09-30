@@ -1,6 +1,6 @@
 // Hero section of the page.
 .hero {
-    margin: 1em;
+    margin: 1.5em;
 }
 
 .hero-img{
@@ -20,14 +20,14 @@
 
 section.hero {
     color: #000927;
-    height: 90vh;
+    height: 80vh;
     animation: moveDown 1.5s ease-in-out forwards;
     opacity: 0;
 }
 
 h1 {
     font-size: 3.5rem;
-    margin-top: 1.5em;
+    margin-top: 1em;
     line-height: 3.5rem;
     font-weight: 600;
 }
