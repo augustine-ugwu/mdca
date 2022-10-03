@@ -30,8 +30,9 @@
 
 .section-1 .subhead {
   margin-top: 1.5em;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #707070;
-  font-weight: 600;
+  font-weight: 400;
+  line-height: 1.3em;
 }
 /*# sourceMappingURL=section1.css.map */
