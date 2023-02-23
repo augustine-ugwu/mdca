@@ -1,119 +1,70 @@
-import React from "react";
 import {
   Box,
   Flex,
-  IconButton,
-  Stack,
-  HStack,
-  Button,
   Text,
-  useColorMode,
-  useDisclosure,
+  IconButton,
+  Button,
+  Stack,
   Collapse,
   Icon,
+  Link,
   Popover,
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
+  useBreakpointValue,
+  useDisclosure,
 } from "@chakra-ui/react";
 import {
-  MoonIcon,
-  SunIcon,
   HamburgerIcon,
   CloseIcon,
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import Logo from "../Assets/112.svg";
 
-// All the routes excluded
-const withouSidebarRoutes = ["/signup", "/login"];
-
-const Navbar = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
+export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
-  const { pathname } = useLocation();
-
-  // Validates if the current pathname includes one the routes you want to hide the sidebar is present on the current url
-  // If that's true render null instead of the sidebar
-
-  if (withouSidebarRoutes.some((item) => pathname.includes(item))) return null;
-
   return (
-    <>
+    <Box>
       <Flex
-        position={"static"}
+        bg={useColorModeValue("white", "gray.800")}
+        color={useColorModeValue("gray.600", "white")}
+        minH={"60px"}
+        py={{ base: 2 }}
         px={{ base: 4 }}
-        height="16"
-        alignItems="center"
-        justifyContent={{ base: "flex-end" }}
+        borderBottom={1}
+        borderStyle={"solid"}
+        borderColor={useColorModeValue("gray.200", "gray.900")}
+        align={"center"}
       >
-        <Box mr={"auto"} ml={{ base: 2, md: "4em" }}>
-          <Link to="/">
-            <Flex verticalAlign={"baseLine"}>
-              <img src={Logo} width="40em" alt="" />
-
-              <Box mt={"auto"} ml={2}>
-                <Text
-                  lineHeight={0.8}
-                  letterSpacing={-1}
-                  fontFamily={"roboto"}
-                  fontSize={24}
-                  fontWeight={900}
-                >
-                  MERCADO
-                </Text>
-                <Text
-                  lineHeight={0.8}
-                  fontFamily={"roboto"}
-                  fontSize={10}
-                  fontWeight={700}
-                >
-                  Digital Creative Agency
-                </Text>
-              </Box>
-            </Flex>
-          </Link>
-        </Box>
+        <Flex
+          flex={{ base: 1, md: "auto" }}
+          ml={{ base: -2 }}
+          display={{ base: "flex", md: "none" }}
+        >
+          <IconButton
+            onClick={onToggle}
+            icon={
+              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+            }
+            variant={"ghost"}
+            aria-label={"Toggle Navigation"}
+          />
+        </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Flex display={{ base: "none", md: "flex" }} ml={24}>
+          <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
         </Flex>
-        <HStack spacing={{ base: "4", md: "6" }}>
-          <Button variant={"unstyled"} onClick={toggleColorMode}>
-            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-          </Button>
-          <Flex
-            flex={{ base: 1, md: "auto" }}
-            ml={{ base: -2 }}
-            display={{ base: "flex", md: "none" }}
-          >
-            <IconButton
-              onClick={onToggle}
-              icon={
-                isOpen ? (
-                  <CloseIcon w={3} h={3} />
-                ) : (
-                  <HamburgerIcon w={5} h={5} />
-                )
-              }
-              variant={"ghost"}
-              aria-label={"Toggle Navigation"}
-            />
-          </Flex>
-        </HStack>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
-    </>
+    </Box>
   );
-};
+}
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
@@ -121,7 +72,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
-    <Stack direction={"row"} spacing={8} fontWeight={600}>
+    <Stack direction={"row"} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -130,7 +81,7 @@ const DesktopNav = () => {
                 p={2}
                 href={navItem.href ?? "#"}
                 fontSize={"sm"}
-                fontWeight={700}
+                fontWeight={500}
                 color={linkColor}
                 _hover={{
                   textDecoration: "none",
@@ -171,13 +122,13 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
       display={"block"}
       p={2}
       rounded={"md"}
-      _hover={{ bg: useColorModeValue("#D40203", "gray.900") }}
+      _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "#D40203" }}
+            _groupHover={{ color: "pink.400" }}
             fontWeight={500}
           >
             {label}
@@ -193,7 +144,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
           align={"center"}
           flex={1}
         >
-          <Icon color={"#D40203"} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
     </Link>
@@ -269,11 +220,7 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: "Home",
-    href: "#",
-  },
-  {
-    label: "About",
+    label: "Inspiration",
     children: [
       {
         label: "Explore Design Work",
@@ -288,7 +235,7 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: "Services",
+    label: "Find Work",
     children: [
       {
         label: "Job Board",
@@ -303,13 +250,11 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: "Contact",
+    label: "Learn Design",
     href: "#",
   },
   {
-    label: "Hire",
+    label: "Hire Designers",
     href: "#",
   },
 ];
-
-export default Navbar;
