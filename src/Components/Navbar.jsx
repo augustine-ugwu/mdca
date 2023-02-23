@@ -79,7 +79,7 @@ const Navbar = () => {
           </Link>
         </Box>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Flex display={{ base: "none", md: "flex" }} ml={24}>
+          <Flex display={{ base: "none", md: "flex" }} ml={20}>
             <DesktopNav />
           </Flex>
         </Flex>
