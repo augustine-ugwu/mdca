@@ -51,7 +51,7 @@ const Navbar = () => {
         alignItems="center"
         justifyContent={{ base: "flex-end" }}
       >
-        <Box mr={"auto"} ml={{ base: 2, md: "4em" }}>
+        <Box mr={"auto"} ml={{ base: "1em", md: "2em", lg: "4em" }}>
           <Link to="/">
             <Flex verticalAlign={"baseLine"}>
               <img src={Logo} width="40em" alt="" />
@@ -117,8 +117,8 @@ const Navbar = () => {
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
-  const linkHoverColor = useColorModeValue("gray.800", "white");
-  const popoverContentBgColor = useColorModeValue("white", "gray.800");
+  const linkHoverColor = useColorModeValue("gray.800", "gray.200");
+  const popoverContentBgColor = useColorModeValue("gray.200", "gray.800");
 
   return (
     <Stack direction={"row"} spacing={8} fontWeight={600}>
@@ -128,7 +128,7 @@ const DesktopNav = () => {
             <PopoverTrigger>
               <Link
                 p={2}
-                href={navItem.href ?? "#"}
+                to={navItem.to ?? "#"}
                 fontSize={"sm"}
                 fontWeight={700}
                 color={linkColor}
@@ -163,10 +163,10 @@ const DesktopNav = () => {
   );
 };
 
-const DesktopSubNav = ({ label, href, subLabel }) => {
+const DesktopSubNav = ({ label, to, subLabel }) => {
   return (
     <Link
-      href={href}
+      to={to}
       role={"group"}
       display={"block"}
       p={2}
@@ -214,7 +214,7 @@ const MobileNav = () => {
   );
 };
 
-const MobileNavItem = ({ label, children, href }) => {
+const MobileNavItem = ({ label, children, to }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -222,7 +222,7 @@ const MobileNavItem = ({ label, children, href }) => {
       <Flex
         py={2}
         as={Link}
-        href={href ?? "#"}
+        to={to}
         justify={"space-between"}
         align={"center"}
         _hover={{
@@ -257,7 +257,7 @@ const MobileNavItem = ({ label, children, href }) => {
         >
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <Link key={child.label} py={2} to={child.to}>
                 {child.label}
               </Link>
             ))}
@@ -270,7 +270,7 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: "Home",
-    href: "#",
+    to: "/",
   },
   {
     label: "About",
@@ -278,37 +278,37 @@ const NAV_ITEMS = [
       {
         label: "Explore Design Work",
         subLabel: "Trending Design to inspire you",
-        href: "#",
+        to: "/about",
       },
       {
         label: "New & Noteworthy",
         subLabel: "Up-and-coming Designers",
-        href: "#",
+        to: "/about",
       },
     ],
   },
   {
-    label: "Services",
+    label: "Our Services",
     children: [
       {
         label: "Job Board",
         subLabel: "Find your dream design job",
-        href: "#",
+        to: "/services",
       },
       {
         label: "Freelance Projects",
         subLabel: "An exclusive list for contract work",
-        href: "#",
+        to: "/services",
       },
     ],
   },
   {
     label: "Contact",
-    href: "#",
+    to: "/contact",
   },
   {
     label: "Hire",
-    href: "#",
+    to: "/hire",
   },
 ];
 

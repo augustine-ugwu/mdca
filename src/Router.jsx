@@ -6,6 +6,8 @@ import NotFound from "./Views/NotFound";
 import GuestLayout from "./Components/GuestLayout";
 import DefaultLayout from "./Components/DefaultLayout";
 import { createBrowserRouter } from "react-router-dom";
+import Hire from "./Views/Hire";
+import Services from "./Views/Services";
 
 const Router = createBrowserRouter([
   {
@@ -23,6 +25,14 @@ const Router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/hire",
+        element: <Hire />,
+      },
+      {
+        path: "/services",
+        element: <Services />,
       },
     ],
   },
