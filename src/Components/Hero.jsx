@@ -51,24 +51,10 @@ export default function CallToActionWithVideo() {
               use everywhere!
             </Text>
           </Heading>
-          <Text fontSize={20} color={"gray.400"}>
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .pauseFor(500)
-                  .typeString(
-                    "Snippy is a rich coding snippets app that lets you create your own code snippets, categorize them, and even sync them in the cloud so you can use them anywhere. "
-                  )
-                  .pauseFor(1000)
-                  .typeString("<b> All that is free!</b>")
-                  .pauseFor(2500)
-                  .start();
-              }}
-              options={{
-                autoStart: true,
-                loop: true,
-              }}
-            />
+          <Text fontSize={22}>
+            Snippy is a rich coding snippets app that lets you create your own
+            code snippets, categorize them, and even sync them in the cloud so
+            you can use them anywhere. All that is free!
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}
@@ -106,6 +92,16 @@ export default function CallToActionWithVideo() {
           position={"relative"}
           w={"full"}
         >
+          <Blob
+            w={"100%"}
+            h={"150%"}
+            position={"absolute"}
+            top={"-20%"}
+            left={0}
+            zIndex={0}
+            color={useColorModeValue("red.90", "red.400")}
+            style={{ filter: "blur(8px)", opacity: 0.2 }}
+          />
           <Box
             position={"relative"}
             height={"300px"}

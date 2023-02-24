@@ -27,6 +27,7 @@ import {
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import Logo from "../Assets/112.svg";
+import styles from "../Components/navbar.module.css";
 
 // All the routes excluded
 const withouSidebarRoutes = ["/signup", "/login"];
@@ -43,11 +44,10 @@ const Navbar = () => {
   if (withouSidebarRoutes.some((item) => pathname.includes(item))) return null;
 
   return (
-    <>
+    <div className={styles.navbar}>
       <Flex
-        // backdropFilter="saturate(180%) blur(5px)"
+        backdropFilter="saturate(180%) blur(2000px)"
         as="header"
-        position="static"
         px={{ base: 4 }}
         height="16"
         alignItems="center"
@@ -113,7 +113,7 @@ const Navbar = () => {
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
-    </>
+    </div>
   );
 };
 
