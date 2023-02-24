@@ -44,7 +44,7 @@ const Navbar = () => {
   if (withouSidebarRoutes.some((item) => pathname.includes(item))) return null;
 
   return (
-    <div>
+    <div className={styles.navbar}>
       <Flex
         backdropFilter="saturate(180%) blur(200px)"
         as="header"
