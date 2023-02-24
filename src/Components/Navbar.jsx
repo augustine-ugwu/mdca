@@ -45,7 +45,9 @@ const Navbar = () => {
   return (
     <>
       <Flex
-        position={"static"}
+        // backdropFilter="saturate(180%) blur(5px)"
+        as="header"
+        position="static"
         px={{ base: 4 }}
         height="16"
         alignItems="center"
@@ -72,7 +74,7 @@ const Navbar = () => {
                   fontSize={10}
                   fontWeight={700}
                 >
-                  Digital Creative Agency
+                  Digital Marketing Agency
                 </Text>
               </Box>
             </Flex>
