@@ -44,7 +44,7 @@ const Navbar = () => {
   if (withouSidebarRoutes.some((item) => pathname.includes(item))) return null;
 
   return (
-    <div className={styles.navbar}>
+    <Box boxShadow={"base"} className={styles.navbar}>
       <Flex
         backdropFilter="saturate(180%) blur(200px)"
         as="header"
@@ -74,7 +74,7 @@ const Navbar = () => {
                   fontSize={10}
                   fontWeight={700}
                 >
-                  Digital Marketing Agency
+                  Digital Creative Agency
                 </Text>
               </Box>
             </Flex>
@@ -113,7 +113,7 @@ const Navbar = () => {
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
-    </div>
+    </Box>
   );
 };
 

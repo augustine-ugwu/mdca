@@ -10,10 +10,8 @@ import {
   Icon,
   IconButton,
   createIcon,
-  IconProps,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Typewriter from "typewriter-effect";
 
 export default function CallToActionWithVideo() {
   return (
@@ -44,17 +42,19 @@ export default function CallToActionWithVideo() {
                 zIndex: -1,
               }}
             >
-              Write once,
+              Growing Your
             </Text>
             <br />
             <Text as={"span"} color={"#D40203"}>
-              use everywhere!
+              Business For You!
             </Text>
           </Heading>
           <Text fontSize={22}>
-            Snippy is a rich coding snippets app that lets you create your own
-            code snippets, categorize them, and even sync them in the cloud so
-            you can use them anywhere. All that is free!
+            We act as a dedicated team to help organizations and small
+            businesses attract, convert and nurture appropriate audiences using
+            the digital space. Whether it’s branding or digital strategy, our
+            mission is to create positive change for our partners, both local
+            and international.
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}
