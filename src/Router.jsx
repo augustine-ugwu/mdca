@@ -1,13 +1,13 @@
 import React from "react";
-import About from "./Views/About";
-import Home from "./Views/Home";
-import Contact from "./Views/Contact";
-import NotFound from "./Views/NotFound";
-import GuestLayout from "./Components/GuestLayout";
-import DefaultLayout from "./Components/DefaultLayout";
+import About from "./views/About";
+import Home from "./views/Home";
+import Contact from "./views/Contact";
+import NotFound from "./views/NotFound";
+import GuestLayout from "./components/GuestLayout";
+import DefaultLayout from "./components/DefaultLayout";
 import { createBrowserRouter } from "react-router-dom";
-import Hire from "./Views/Hire";
-import Services from "./Views/Services";
+import Staff from "./views/Staff";
+import Projects from "./views/Projects";
 
 const Router = createBrowserRouter([
   {
@@ -27,12 +27,12 @@ const Router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "/hire",
-        element: <Hire />,
+        path: "/staff",
+        element: <Staff />,
       },
       {
-        path: "/services",
-        element: <Services />,
+        path: "/projects",
+        element: <Projects />,
       },
     ],
   },

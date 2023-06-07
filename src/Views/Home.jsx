@@ -1,15 +1,16 @@
 import React from "react";
-import Hero from "../Components/Hero";
-import Testimonials from "../Components/Testimonials";
-import Features from "../Components/Features";
+import Hero from "../components/Hero";
+import Features from "../components/Features";
+import Aboutsection from "../components/Aboutsection";
+import Staff from "../components/Staff";
 
 const Home = () => {
   return (
     <>
       <Hero />
-
       <Features />
-      <Testimonials />
+      <Aboutsection />
+      <Staff />
     </>
   );
 };

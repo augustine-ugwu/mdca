@@ -26,8 +26,8 @@ import {
 } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import Logo from "../Assets/112.svg";
-import styles from "../Components/navbar.module.css";
+import Logo from "../assets/112.svg";
+import styles from "../components/navbar.module.css";
 
 // All the routes excluded
 const withouSidebarRoutes = ["/signup", "/login"];
@@ -46,10 +46,11 @@ const Navbar = () => {
   return (
     <Box boxShadow={"base"} className={styles.navbar}>
       <Flex
-        backdropFilter="saturate(180%) blur(200px)"
+        backdropFilter="saturate(180%) blur(10px)"
         as="header"
         px={{ base: 4 }}
         height="16"
+        width="100vw"
         alignItems="center"
         justifyContent={{ base: "flex-end" }}
       >
@@ -74,7 +75,7 @@ const Navbar = () => {
                   fontSize={10}
                   fontWeight={700}
                 >
-                  Digital Creative Agency
+                  Digital Market Place
                 </Text>
               </Box>
             </Flex>
@@ -85,7 +86,7 @@ const Navbar = () => {
             <DesktopNav />
           </Flex>
         </Flex>
-        <HStack spacing={{ base: "4", md: "6" }}>
+        <HStack spacing={{ base: "2", md: "6" }}>
           <Button variant={"unstyled"} onClick={toggleColorMode}>
             {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
           </Button>
@@ -205,7 +206,7 @@ const DesktopSubNav = ({ label, to, subLabel }) => {
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue("white", "gray.800")}
+      bg={useColorModeValue("white", "gray.900")}
       p={4}
       display={{ md: "none" }}
     >
