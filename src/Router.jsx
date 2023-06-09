@@ -6,8 +6,8 @@ import NotFound from "./views/NotFound";
 import GuestLayout from "./components/GuestLayout";
 import DefaultLayout from "./components/DefaultLayout";
 import { createBrowserRouter } from "react-router-dom";
-import Staff from "./views/Staff";
-import Projects from "./views/Projects";
+import Hire from "./views/Hire";
+import Services from "./views/Services";
 
 const Router = createBrowserRouter([
   {
@@ -27,12 +27,12 @@ const Router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "/staff",
-        element: <Staff />,
+        path: "/hire",
+        element: <Hire />,
       },
       {
-        path: "/projects",
-        element: <Projects />,
+        path: "/services",
+        element: <Services />,
       },
     ],
   },

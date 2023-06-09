@@ -20,19 +20,19 @@ const Hero = () => {
       <Box className={styles.showcase}>
         <video src={BgVideo} muted loop autoPlay poster={thumbnail}></video>
         <Box
+          width={{ base: "full", sm: "lg", lg: "xl" }}
+          margin={"auto"}
           className={styles.text}
           maxW={{ base: "xl", md: "3xl" }}
-          px={{ base: "1em" }}
-          pl={{ base: "1em", sm: "3em", md: "6em" }}
-          pt={{ base: "10em", md: "12em" }}
         >
           <Heading
+            textAlign={"center"}
             data-aos="fade-down"
             data-aos-duration="2000"
             data-aos-easing="linear"
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: "3xl", sm: "4xl", lg: "5xl" }}
+            fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
           >
             <Text
               as={"span"}
@@ -55,7 +55,13 @@ const Hero = () => {
               Business For You!
             </Text>
           </Heading>
-          <Text py={2} fontSize={{ base: 16, sm: 18 }}>
+          <Text
+            fontWeight={400}
+            textAlign={"center"}
+            pt={2}
+            pb={4}
+            fontSize={{ base: 16, sm: 18 }}
+          >
             We act as a dedicated team to help organizations and small
             businesses attract, convert and nurture appropriate audiences using
             the digital space. Whether it's branding or digital strategy, our
@@ -63,32 +69,27 @@ const Hero = () => {
             and international.
           </Text>
 
-          <HStack spacing={2} py={2}>
+          <HStack margin={"auto"} justifyContent={"center"} spacing={4} py={2}>
             <Link to="/about">
               <Button
                 rightIcon={<ArrowForwardIcon />}
-                colorScheme="green"
+                colorScheme="teal"
                 variant="solid"
+                fontWeight={700}
               >
-                Read More
+                Learn More
               </Button>
             </Link>
             <Link to="/contact">
               <Button
                 rightIcon={<EmailIcon />}
-                colorScheme="red"
+                colorScheme="white"
                 variant="outline"
+                fontWeight={700}
               >
                 Contact Us
               </Button>
             </Link>
-          </HStack>
-
-          <HStack spacing={3} className={styles.social} pt={{ base: "3em" }}>
-            <FaFacebook fontSize={24} />
-            <FaTwitter fontSize={24} />
-            <FaLinkedin fontSize={24} />
-            <FaInstagram fontSize={24} />
           </HStack>
         </Box>
       </Box>

@@ -14,7 +14,13 @@ import {
   Flex,
   Image,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+  FaFacebook,
+  FaLinkedin,
+} from "react-icons/fa";
 import { BiMailSend } from "react-icons/bi";
 import Logo from "../assets/112.svg";
 
@@ -75,27 +81,43 @@ export default function LargeWithNewsletter() {
 
                 <Box mt={"auto"} ml={2}>
                   <Text
-                    lineHeight={1.6}
+                    textDecoration={"none"}
+                    lineHeight={0.8}
                     letterSpacing={-1}
                     fontFamily={"roboto"}
-                    fontSize={20}
-                    fontWeight={800}
+                    fontSize={24}
+                    fontWeight={900}
                   >
-                    mercado
+                    MERCADO
+                  </Text>
+                  <Text
+                    textDecoration={"none"}
+                    lineHeight={0.8}
+                    fontFamily={"roboto"}
+                    fontSize={10}
+                    fontWeight={700}
+                  >
+                    Digital Marketing Agency
                   </Text>
                 </Box>
               </Flex>
             </Link>
             <Text fontSize={"sm"} fontWeight={600}>
-              © 2022 Mercado Digital Market Place. <br />
+              © 2022 Mercado Digital Marketing Agency. <br />
               All rights reserved
             </Text>
-            <Stack direction={"row"} spacing={6}>
+            <Stack direction={"row"} spacing={2}>
               <SocialButton label={"Twitter"} href={"#"}>
                 <FaTwitter />
               </SocialButton>
+              <SocialButton label={"LinkedIn"} href={"#"}>
+                <FaLinkedin />
+              </SocialButton>
               <SocialButton label={"YouTube"} href={"#"}>
                 <FaYoutube />
+              </SocialButton>
+              <SocialButton label={"Facebook"} href={"#"}>
+                <FaFacebook />
               </SocialButton>
               <SocialButton label={"Instagram"} href={"#"}>
                 <FaInstagram />

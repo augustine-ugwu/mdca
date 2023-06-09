@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import Slideshow from "./Slideshow";
-import Img1 from "../assets/1542.jpg";
+import Img1 from "../assets/1545.jpg";
 import styles from "./index.module.css";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 
@@ -52,7 +52,7 @@ const Aboutsection = () => {
           />
 
           <Stack>
-            <CardBody p={{ base: 1, md: 10 }}>
+            <CardBody p={{ base: 4, md: 10 }}>
               <Heading size="lg">Brief About Us</Heading>
               <Text py="2">
                 Ship & Shore Services Limited has been very active and a major
@@ -75,14 +75,14 @@ const Aboutsection = () => {
               </Text>
             </CardBody>
 
-            <CardFooter p={{ base: 1, md: 10 }}>
+            <CardFooter p={{ base: 4, md: 10 }}>
               <Link to="/about">
                 <Button
                   rightIcon={<ArrowForwardIcon />}
                   colorScheme="teal"
                   variant="solid"
                 >
-                  Read More About Us
+                  Learn More About Us
                 </Button>
               </Link>
             </CardFooter>

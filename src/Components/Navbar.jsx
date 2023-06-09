@@ -75,7 +75,7 @@ const Navbar = () => {
                   fontSize={10}
                   fontWeight={700}
                 >
-                  Digital Market Place
+                  Digital Marketing Agency
                 </Text>
               </Box>
             </Flex>

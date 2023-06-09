@@ -8,7 +8,7 @@ const DefaultLayout = () => {
   return (
     <div>
       <Navbar />
-      <Box minH="92vh">
+      <Box minH="92vh" bg={useColorModeValue("gray.100", "gray.900")}>
         <Outlet />
       </Box>
       <Footer />
