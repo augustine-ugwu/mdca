@@ -15,7 +15,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import Slideshow from "./Slideshow";
 import Img1 from "../assets/1545.jpg";
 import styles from "./index.module.css";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
@@ -55,23 +54,35 @@ const Aboutsection = () => {
             <CardBody p={{ base: 4, md: 10 }}>
               <Heading size="lg">Brief About Us</Heading>
               <Text py="2">
-                Ship & Shore Services Limited has been very active and a major
-                player in the Nigerian Shipping/Oil & Gas industry. Following
-                the need for transportation of petroleum products by the
-                Nigerian National Petroleum Corporation (NNPC) in the early
-                1990, the company was one of the pioneer that supplied the NNPC
-                coastal vessel on charter for the transportation of refined
-                petroleum products AGO, LPFO and PMS from the refineries at
-                Portharcourt and Warri and also lightering import vessels
-                through Ship to Ship (STS) transfer and discharge at storage
-                facilities in the Lagos area. Over the years- 35 years, the
-                company has had the privilege of providing vessels and tugboats
-                to the Nigerian National Petroleum Corporation (NNPC). Ship &
-                Shore Services Limited based on her pedigree, technical and
-                professional experience in bunkering and vessel
-                chartering/operations has been privileged to charter vessels as
-                well as the only company awarded a bunkering contract of
-                supplying NNPC vessels consistently for over 20 years.
+                We are a dedicated team committed to assisting organizations and
+                small businesses in leveraging the power of the digital space to
+                attract, convert, and nurture their target audiences. With
+                expertise in branding and digital strategy, our mission is to
+                drive positive change for our partners, be it at a local or
+                international level. At our core, we believe in the
+                transformative potential of effective digital marketing. In
+                today's fast-paced and interconnected world, establishing a
+                strong online presence is crucial for success. That's where we
+                come in. By harnessing our collective knowledge and skills, we
+                work closely with our clients to develop tailored strategies
+                that align with their unique goals and objectives. Our team
+                understands the ever-evolving digital landscape and keeps up
+                with the latest trends, technologies, and best practices.
+                Whether it's crafting compelling brand identities, designing
+                engaging websites, implementing targeted advertising campaigns,
+                or optimizing online visibility through search engine
+                optimization (SEO), we offer a comprehensive range of services
+                to meet our clients' diverse needs. What sets us apart is our
+                unwavering dedication to creating meaningful and impactful
+                change. We strive to deliver measurable results and ensure that
+                our clients achieve a competitive edge in their respective
+                industries. By adopting a collaborative approach, we build
+                long-lasting partnerships based on trust, transparency, and
+                mutual growth. No matter the size or nature of your business, we
+                are here to help you navigate the digital landscape and achieve
+                your goals. Join us on this journey as we leverage the limitless
+                opportunities offered by the digital world to drive your
+                success.
               </Text>
             </CardBody>
 
