@@ -6,7 +6,6 @@ import Contact from "./views/Contact";
 import NotFound from "./views/NotFound";
 import Services from "./views/Services";
 import Hire from "./views/Hire";
-import GuestLayout from "./components/GuestLayout";
 import DefaultLayout from "./components/DefaultLayout";
 
 const Router = createBrowserRouter([
