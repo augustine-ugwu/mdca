@@ -38,12 +38,6 @@ const Router = createBrowserRouter([
   },
 
   {
-    path: "/",
-    element: <GuestLayout />,
-    children: [],
-  },
-
-  {
     path: "*",
     element: <NotFound />,
   },
