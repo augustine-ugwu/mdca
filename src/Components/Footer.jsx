@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 import {
   Box,
   chakra,
@@ -97,13 +96,13 @@ export default function LargeWithNewsletter() {
                     fontSize={10}
                     fontWeight={700}
                   >
-                    Digital Marketing Agency
+                    Digital Creative Agency
                   </Text>
                 </Box>
               </Flex>
             </Link>
             <Text fontSize={"sm"} fontWeight={600}>
-              © 2022 Mercado Digital Marketing Agency. <br />
+              © 2022 Mercado Digital Creative Agency. <br />
               All rights reserved
             </Text>
             <Stack direction={"row"} spacing={2}>
